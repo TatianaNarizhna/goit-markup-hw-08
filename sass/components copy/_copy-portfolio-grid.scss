@@ -1,0 +1,99 @@
+.table-portfolio {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.table-portfolio__list {
+  width: calc((100% - 60px) / 3);
+  margin-bottom: 30px;
+  margin-right: 30px;
+
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  &:nth-last-child(-n + 3) {
+    margin-bottom: 0;
+  }
+}
+
+.table-portfolio__link {
+  display: block;
+  @extend %link;
+
+  @include transition(box-shadow);
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px $box-shadow-grid1, 0px 4px 4px $box-shadow-grid2,
+      1px 4px 6px $box-shadow-grid3;
+  }
+}
+
+.table-portfolio__link:hover .table-portfolio__overlay--transformed,
+.table-portfolio__link:focus .table-portfolio__overlay--transformed {
+  transform: translateY(-100%);
+}
+
+.table-portfolio__overlay {
+  position: relative;
+  overflow: hidden;
+
+  &--transformed {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 100%;
+    left: 0;
+    background-color: $accent-color;
+    transform: translateY(0);
+
+    @include transition(transform);
+  }
+}
+
+.table-portfolio__overlay--text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  padding: 63px 24px;
+  margin: 0;
+
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.55;
+  color: $white-hero-color;
+}
+
+.table-portfolio__content {
+  padding: 20px 24px;
+  height: 110px;
+  border-right: 1px solid $portfolio-border;
+  border-bottom: 1px solid $portfolio-border;
+  border-left: 1px solid $portfolio-border;
+}
+
+.projects {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: $primary-text-color;
+
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  text-transform: none;
+  margin-bottom: 4px;
+}
+
+.table-portfolio__application {
+  margin-top: 0;
+  margin-bottom: 0px;
+
+  font-size: 16px;
+  line-height: 1.87;
+
+  color: $secondary-text-color;
+}

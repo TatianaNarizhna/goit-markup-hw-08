@@ -1,0 +1,73 @@
+%backgroundColor {
+  background-color: $white-hero-color;
+}
+
+%textColor {
+  color: $primary-text-color;
+}
+
+%fontFamily {
+  font-family: Roboto, sans-serif;
+}
+
+%letterSpacing {
+  letter-spacing: 0.03em;
+}
+
+%fontWeight {
+  font-weight: normal;
+}
+
+%fontSize {
+  font-size: 14px;
+}
+
+%img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+%link {
+  text-decoration: none;
+}
+
+%list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+%container {
+  margin-left: auto;
+  margin-right: auto;
+  // width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 480px;
+
+  // @media screen and (min-width: $mobile) {
+  //   width: 450px;
+  // }
+
+  @media screen and (min-width: $tablet) {
+    width: 768px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 1200px;
+  }
+}
+
+%is-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+%section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}

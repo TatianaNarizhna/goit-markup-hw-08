@@ -1,0 +1,52 @@
+.section-title {
+  margin-top: 0;
+  margin-bottom: 50px;
+
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+}
+
+.is-hidden {
+  @extend %is-hidden;
+}
+
+.filter-portfolio {
+  display: flex;
+  margin-bottom: 50px;
+  justify-content: center;
+
+  &__list {
+    margin-right: 8px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.filter-portfolio__button {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+
+  border-radius: 4px;
+  padding: 6px 22px;
+  cursor: pointer;
+
+  border-style: none;
+  outline: none;
+
+  @include doubleTransition(background-color, color);
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+    color: $white-hero-color;
+
+    box-shadow: 0px 3px 1px $border-cross, 0px 1px 2px $box-shadow2,
+      0px 2px 2px $box-shadow-grid1;
+  }
+}

@@ -1,0 +1,29 @@
+@mixin centeredFlex($type: flex) {
+  display: $type;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin transverseAxisFlex($type: flex) {
+  display: $type;
+  align-items: center;
+}
+
+@mixin transition($type: color) {
+  transition-property: $type;
+  transition-duration: 250ms;
+  transition-timing-function: $timing-function;
+}
+
+@mixin doubleTransition($type1, $type2) {
+  transition-property: $type1, $type2;
+  transition-duration: 250ms, 250ms;
+  transition-timing-function: $timing-function, $timing-function;
+}
+
+@mixin tripleTransition($type1, $type2, $type3) {
+  transition-property: $type1, $type2, $type3;
+  transition-duration: 250ms, 250ms, 250ms;
+  transition-timing-function: $timing-function, $timing-function,
+    $timing-function;
+}
