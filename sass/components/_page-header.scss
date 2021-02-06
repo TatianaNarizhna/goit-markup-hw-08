@@ -1,15 +1,29 @@
-.common-line {
-  @include transverseAxisFlex();
+.list {
+  @extend %list;
+}
+
+.link {
+  @extend %link;
 }
 
 .logo {
-  display: block;
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding: 16px 0 16px 0;
+
+  color: $accent-color;
+  font-family: Raleway, sans-serif;
+  font-weight: bold;
+  font-size: 24px;
   line-height: 1.16;
+  display: inline-block;
+  @extend %link;
 
   &__studio {
     color: $primary-text-color;
+  }
+
+  @media screen and (min-width: $tablet) {
+    padding: 26px 0 26px 0;
+    margin-right: 88px;
   }
 }
 
@@ -18,6 +32,7 @@
 
   @media screen and (min-width: $tablet) {
     display: flex;
+
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
@@ -25,23 +40,138 @@
   }
 }
 
+.site-nav__items--positioned {
+  position: relative;
+}
+
+.site-nav__link {
+  @extend %link;
+  @extend %textColor;
+
+  @media screen and (min-width: $tablet) {
+    &--active {
+      @include transition();
+    }
+
+    &--active:hover,
+    &--active:focus {
+      color: $accent-color;
+    }
+
+    &--underlined {
+      color: $accent-color;
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+        display: block;
+        width: 100%;
+        height: 4px;
+        border-radius: 2px;
+        background-color: $accent-color;
+        opacity: 1;
+
+        @include transition(opacity);
+      }
+    }
+  }
+}
+
+.site-nav__items {
+  @media screen and (min-width: $tablet) {
+    margin-right: 50px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    cursor: pointer;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
 .header-contacts {
   display: none;
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+  }
+}
+
+.header-contacts__address {
+  @extend %link;
+  color: $secondary-text-color;
+
+  @media screen and (min-width: $tablet) {
+    font-weight: 500;
+    line-height: 1.16;
+    letter-spacing: 0.02em;
+  }
+
+  &--active {
+    @include transition();
+  }
+
+  &--active:hover,
+  &--active:focus {
+    color: $accent-color;
+  }
+}
+
+.header-contacts__items:not(:last-child) {
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 10px;
+  }
+}
+
+.envelope-icon {
+  @media screen and (min-width: $tablet) {
+    height: 10px;
+    width: 14px;
+
+    fill: currentColor;
+  }
+}
+
+.amartphone-icon {
+  @media screen and (min-width: $tablet) {
+    height: 14px;
+    width: 10px;
+
+    fill: currentColor;
+  }
+}
+
+.common-line {
+  @media screen and (min-width: $tablet) {
+    @include transverseAxisFlex();
+  }
+}
+
+.line {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+  }
 }
 
 .header__menu {
-  display: block;
   margin-left: auto;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-right: 8px;
-
+  padding: 0 23px 0 0;
   background-color: transparent;
-  border: none;
-  cursor: pointer;
+  border: transparent;
 
-  &:hover,
-  &:focus {
-    fill: $accent-color;
+  cursor: pointer;
+}
+
+.header__menu {
+  @media screen and (min-width: $tablet) {
+    display: none;
   }
+}
+
+.header {
+  display: flex;
 }
