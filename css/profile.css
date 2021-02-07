@@ -360,7 +360,12 @@ img {
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
-  width: 480px;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    width: 450px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -413,8 +418,16 @@ img {
 
 @media screen and (min-width: 768px) {
   .logo {
-    padding: 26px 0 26px 0;
     margin-right: 88px;
+    padding: 26px 0 26px 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .logo {
+    margin-right: 93px;
+    font-size: 26px;
+    line-height: 1.19;
   }
 }
 
@@ -428,7 +441,6 @@ img {
     display: -ms-flexbox;
     display: flex;
     font-weight: 500;
-    font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
   }
@@ -503,6 +515,21 @@ img {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .header-contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .header-contacts__address {
   color: #757575;
 }
@@ -528,25 +555,71 @@ img {
   color: #2196f3;
 }
 
+@media screen and (min-width: 1200px) {
+  .header-contacts__address {
+    line-height: 1.14;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .header-contacts__items:not(:last-child) {
     margin-bottom: 10px;
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .header-contacts__items:not(:last-child) {
+    margin-bottom: 0;
+    margin-right: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header-contacts__items {
+    padding: 32px 0 32px 0;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .envelope-icon {
+    margin-right: 8px;
     height: 10px;
     width: 14px;
     fill: currentColor;
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .envelope-icon {
+    margin-right: 10px;
+    height: 12px;
+    width: 16px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .amartphone-icon {
+    margin-right: 8px;
     height: 14px;
     width: 10px;
     fill: currentColor;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .amartphone-icon {
+    margin-right: 10px;
+    height: 16px;
+    width: 10px;
   }
 }
 

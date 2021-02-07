@@ -1,3 +1,7 @@
+.container {
+  @extend %container;
+}
+
 .list {
   @extend %list;
 }
@@ -22,8 +26,15 @@
   }
 
   @media screen and (min-width: $tablet) {
-    padding: 26px 0 26px 0;
     margin-right: 88px;
+    padding: 26px 0 26px 0;
+  }
+
+  @media screen and(min-width: $desktop) {
+    margin-right: 93px;
+
+    font-size: 26px;
+    line-height: 1.19;
   }
 }
 
@@ -34,7 +45,6 @@
     display: flex;
 
     font-weight: 500;
-    font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
   }
@@ -99,6 +109,12 @@
     flex-direction: column;
     margin-left: auto;
   }
+
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
 }
 
 .header-contacts__address {
@@ -119,29 +135,60 @@
   &--active:focus {
     color: $accent-color;
   }
+  @media screen and (min-width: $desktop) {
+    line-height: 1.14;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .header-contacts__items:not(:last-child) {
   @media screen and (min-width: $tablet) {
     margin-bottom: 10px;
   }
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 0;
+    margin-right: 30px;
+  }
+}
+
+.header-contacts__items {
+  @media screen and (min-width: $desktop) {
+    padding: 32px 0 32px 0;
+  }
 }
 
 .envelope-icon {
   @media screen and (min-width: $tablet) {
+    margin-right: 8px;
     height: 10px;
     width: 14px;
 
     fill: currentColor;
   }
+
+  @media screen and (min-width: $desktop) {
+    margin-right: 10px;
+    height: 12px;
+    width: 16px;
+  }
 }
 
 .amartphone-icon {
   @media screen and (min-width: $tablet) {
+    margin-right: 8px;
     height: 14px;
     width: 10px;
 
     fill: currentColor;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-right: 10px;
+    height: 16px;
+    width: 10px;
   }
 }
 
@@ -149,6 +196,10 @@
   @media screen and (min-width: $tablet) {
     @include transverseAxisFlex();
   }
+  // @media screen and (min-width: $desktop) {
+  //   display: flex;
+  //   align-items: baseline;
+  // }
 }
 
 .line {
