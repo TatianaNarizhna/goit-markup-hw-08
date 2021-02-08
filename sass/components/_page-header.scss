@@ -195,11 +195,6 @@
 .common-line {
   @media screen and (min-width: $tablet) {
     @include transverseAxisFlex();
-  }
-  // @media screen and (min-width: $desktop) {
-  //   display: flex;
-  //   align-items: baseline;
-  // }
 }
 
 .line {
