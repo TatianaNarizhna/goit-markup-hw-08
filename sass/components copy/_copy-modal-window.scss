@@ -216,39 +216,6 @@
   }
 }
 
-// .modal-form__agreement--hidden:checked
-//   + .modal-form__agreement--checked::before {
-//   background-color: $accent-color;
-//   background-image: url(/imagesoptimized/icon-check.svg);
-//   background-size: contain;
-//   background-origin: border-box;
-//   border-color: $accent-color;
-// }
-
-// .modal-form__agreement--checked::before {
-//   content: '';
-//   display: inline-block;
-//   width: 16px;
-//   height: 15px;
-//   border: 2px solid $primary-text-color;
-//   border-radius: 2px;
-//   margin-right: 7px;
-
-//   background-color: $white-hero-color;
-
-//   @include tripleTransition(background-color, border-color, border);
-// }
-
-// .modal-form__agreement--checked {
-//   display: flex;
-//   align-items: center;
-
-//   &:hover::before,
-//   &:focus::before {
-//     border: 2px solid $accent-color;
-//   }
-// }
-
 .modal-form__agreement--contract {
   color: $accent-color;
   text-decoration: underline;
