@@ -99,24 +99,50 @@
 
           <!-- выпадающее меню -->
           <div class="menu-container" id="menu-container" data-menu>
-            <ul>
-              <li><a href="./index.html">Студия</a></li>
-              <li><a href="./index.html">Портфолио</a></li>
-              <li><a href="./index.html">Контакты</a></li>
-            </ul>
-            <ul>
-              <li>
-                <a href="tel:+38 096 111 11 11">+38 096 111 11 11</a>
+            <ul class="menu-container__navigation">
+              <li class="menu-container__item">
+                <a
+                  href="./index.html"
+                  class="menu-container__link menu-container__link--active"
+                  >Студия</a
+                >
               </li>
-              <li>
-                <a href="mailto:info@devstudio.com">info@devstudio.com</a>
+              <li class="menu-container__item">
+                <a href="./index.html" class="menu-container__link"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="menu-container__item">
+                <a href="./index.html" class="menu-container__link">Контакты</a>
               </li>
             </ul>
-            <ul>
-              <li><a href="">Instagram</a></li>
-              <li><a href="">Twitter</a></li>
-              <li><a href="">Facebook</a></li>
-              <li><a href="">LinkedIn</a></li>
+
+            <ul class="menu-container__contacts--list">
+              <li class="menu-container__contacts">
+                <a href="tel:+38 096 111 11 11" class="menu-container__tel"
+                  >+38 096 111 11 11</a
+                >
+              </li>
+              <li class="menu-container__contacts">
+                <a href="mailto:info@devstudio.com" class="menu-container__mail"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+
+            <ul class="menu-container__network">
+              <li class="menu-container__social">
+                <a href="" class="menu-container__social--link">Instagram</a>
+              </li>
+              <li class="menu-container__social">
+                <a href="" class="menu-container__social--link">Twitter</a>
+              </li>
+              <li class="menu-container__social">
+                <a href="" class="menu-container__social--link">Facebook</a>
+              </li>
+              <li class="menu-container__social">
+                <a href="" class="menu-container__social--link">LinkedIn</a>
+              </li>
             </ul>
           </div>
         </nav>
@@ -215,9 +241,13 @@
             <li class="skills__img">
               <div>
                 <img
-                  src="./imagesoptimized/skills1-min.jpg"
-                  alt="набор разметки"
+                  srcset="
+                    ./imagesoptimized/service/img-1-1x.jpg 1x,
+                    ./imagesoptimized/service/img-1-2x.jpg 2x
+                  "
+                  src="./imagesoptimized/service/img-1-1x.jpg"
                   width="370"
+                  alt="Разработка приложений"
                 />
                 <div class="skills__thumb">
                   <h3 class="skills__project">Десктопные приложения</h3>
@@ -227,9 +257,13 @@
             <li class="skills__img">
               <div>
                 <img
-                  src="./imagesoptimized/skills2-min.jpg"
-                  alt="оплата услуг через приложение"
+                  srcset="
+                    ./imagesoptimized/service/img-2-1x.jpg 1x,
+                    ./imagesoptimized/service/img-2-2x.jpg 2x
+                  "
+                  src="./imagesoptimized/service/img-2-1x.jpg"
                   width="370"
+                  alt="Мобильные приложения"
                 />
                 <div class="skills__thumb">
                   <h3 class="skills__project">Мобильные приложения</h3>
@@ -239,9 +273,13 @@
             <li class="skills__img">
               <div>
                 <img
-                  src="./imagesoptimized/skills3-min.jpg"
-                  alt="практика с помощью планшета"
+                  srcset="
+                    ./imagesoptimized/service/img-3-1x.jpg 1x,
+                    ./imagesoptimized/service/img-3-2x.jpg 2x
+                  "
+                  src="./imagesoptimized/service/img-3-1x.jpg"
                   width="370"
+                  alt="Мобильные приложения"
                 />
                 <div class="skills__thumb">
                   <h3 class="skills__project">Дизайнерские решения</h3>
@@ -258,11 +296,33 @@
           <h2 class="section-title">Наша команда</h2>
           <ul class="team-workers list">
             <li class="team-workers__portfolio">
-              <img
-                src="./imagesoptimized/ourteam1-min.jpg"
-                alt="Игорь Демьяненко"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./imagesoptimized/our-team/desktop/img1-d.jpg    1x,
+                    ./imagesoptimized/our-team/desktop/img1-d-2x.jpg 2x
+                  "
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="
+                    ./imagesoptimized/our-team/tablet/img1-tab.jpg    1x,
+                    ./imagesoptimized/our-team/tablet/img1-tab-2x.jpg 2x
+                  "
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="
+                    ./imagesoptimized/our-team/mobile/img1-mob.jpg    1x,
+                    ./imagesoptimized/our-team/mobile/img1-mob-2x.jpg 2x
+                  "
+                  media="(max-width:767px)"
+                />
+                <img
+                  src="./imagesoptimized/our-team/desktop/img1-d.jpg"
+                  alt=""
+                />
+              </picture>
 
               <div class="team-workers__profile">
                 <h3 class="team-workers__name list__title--third">
@@ -314,11 +374,33 @@
             </li>
 
             <li class="team-workers__portfolio">
-              <img
-                src="./imagesoptimized/ourteam2-min.jpg"
-                alt="Ольга Репина"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./imagesoptimized/our-team/desktop/img2-d.jpg    1x,
+                    ./imagesoptimized/our-team/desktop/img2-d-2x.jpg 2x
+                  "
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="
+                    ./imagesoptimized/our-team/tablet/img2-tab.jpg    1x,
+                    ./imagesoptimized/our-team/tablet/img2-tab-2x.jpg 2x
+                  "
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="
+                    ./imagesoptimized/our-team/mobile/img2-mob.jpg    1x,
+                    ./imagesoptimized/our-team/mobile/img2-mob-2x.jpg 2x
+                  "
+                  media="(max-width:767px)"
+                />
+                <img
+                  src="./imagesoptimized/our-team/desktop/img2-d.jpg"
+                  alt=""
+                />
+              </picture>
               <div class="team-workers__profile">
                 <h3 class="team-workers__name list__title--third">
                   Ольга Репина
@@ -369,11 +451,33 @@
             </li>
 
             <li class="team-workers__portfolio">
-              <img
-                src="./imagesoptimized/ourteam3-min.jpg"
-                alt="Николай Тарасов"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./imagesoptimized/our-team/desktop/img3-d.jpg    1x,
+                    ./imagesoptimized/our-team/desktop/img3-d-2x.jpg 2x
+                  "
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="
+                    ./imagesoptimized/our-team/tablet/img3-tab.jpg    1x,
+                    ./imagesoptimized/our-team/tablet/img3-tab-2x.jpg 2x
+                  "
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="
+                    ./imagesoptimized/our-team/mobile/img3-mob.jpg    1x,
+                    ./imagesoptimized/our-team/mobile/img3-mob-2x.jpg 2x
+                  "
+                  media="(max-width:767px)"
+                />
+                <img
+                  src="./imagesoptimized/our-team/desktop/img3-d.jpg"
+                  alt=""
+                />
+              </picture>
               <div class="team-workers__profile">
                 <h3 class="team-workers__name list__title--third">
                   Николай Тарасов
@@ -424,11 +528,33 @@
             </li>
 
             <li class="team-workers__portfolio">
-              <img
-                src="./imagesoptimized/ourteam4-min.jpg"
-                alt="Михаил Ермаков"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./imagesoptimized/our-team/desktop/img4-d.jpg    1x,
+                    ./imagesoptimized/our-team/desktop/img4-d-2x.jpg 2x
+                  "
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="
+                    ./imagesoptimized/our-team/tablet/img4-tab.jpg    1x,
+                    ./imagesoptimized/our-team/tablet/img4-tab-2x.jpg 2x
+                  "
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="
+                    ./imagesoptimized/our-team/mobile/img4-mob.jpg    1x,
+                    ./imagesoptimized/our-team/mobile/img4-mob-2x.jpg 2x
+                  "
+                  media="(max-width:767px)"
+                />
+                <img
+                  src="./imagesoptimized/our-team/desktop/img4-d.jpg"
+                  alt=""
+                />
+              </picture>
               <div class="team-workers__profile">
                 <h3 class="team-workers__name list__title--third">
                   Михаил Ермаков

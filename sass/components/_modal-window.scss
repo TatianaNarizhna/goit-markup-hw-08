@@ -2,10 +2,12 @@
   position: fixed;
   top: 0;
   left: 0;
+  padding: 15px;
 
   width: 100%;
   height: 100%;
   opacity: 1;
+  overflow-y: scroll;
 
   background-color: $backdrop;
 
@@ -28,15 +30,29 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
+  z-index: 5;
+  margin: 93px auto;
+  padding: 40px;
 
-  min-width: 528px;
-  min-height: 581px;
+  width: 450px;
+  height: 609px;
+
   background-color: $white-hero-color;
   box-shadow: 0px 1px 3px $box-shadow-grid1, 0px 1px 1px $box-shadow,
     0px 2px 1px $backdrop;
   border-radius: 4px;
 
   @include transition(transform);
+
+  @media screen and (min-width: $tablet) {
+    margin: 208px auto;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 528px;
+    height: 581px;
+    margin: 221px auto;
+  }
 }
 
 .backdrop.is-hidden .modal-window {
@@ -46,27 +62,32 @@
 /*форма в модальном окне*/
 
 .modal-form {
-  padding: 46px 40px 35px 40px;
+  // padding: 40px;
+  height: 100%;
 
   &__paragraph {
     margin-top: 0;
     margin-bottom: 12px;
     font-weight: bold;
     font-size: 20px;
-    line-height: 1.15;
+    line-height: 1.5;
     text-align: center;
+
+    @media screen and (min-width: $desktop) {
+      line-height: 1.15;
+    }
   }
 }
 
 .modal-form__thumb {
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 .modal-form__input {
   display: flex;
   flex-direction: column;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .modal-form__input label {
@@ -90,8 +111,12 @@
 
   font-weight: normal;
   font-size: 12px;
-  line-height: 1.16;
+  line-height: 1.14;
   letter-spacing: 0.01em;
+
+  @media screen and (min-width: $desktop) {
+    line-height: 1.16;
+  }
 }
 
 .modal-form__input:focus-within > textarea {
@@ -123,8 +148,8 @@
 
 .modal-form__border {
   line-height: 16px;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 11px;
+  padding-bottom: 11px;
   padding-left: 42px;
   width: 100%;
 }
@@ -154,12 +179,17 @@
   width: 425px;
   margin-right: auto;
   margin-left: auto;
+}
 
-  & label {
-    font-weight: normal;
+.modal-form__agreement label {
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 1.16;
+  color: $secondary-text-color;
+
+  @media screen and (min-width: $desktop) {
     font-size: 14px;
     line-height: 1.71;
-    color: $secondary-text-color;
   }
 }
 
@@ -215,39 +245,6 @@
     border: 2px solid $accent-color;
   }
 }
-
-// .modal-form__agreement--hidden:checked
-//   + .modal-form__agreement--checked::before {
-//   background-color: $accent-color;
-//   background-image: url(/imagesoptimized/icon-check.svg);
-//   background-size: contain;
-//   background-origin: border-box;
-//   border-color: $accent-color;
-// }
-
-// .modal-form__agreement--checked::before {
-//   content: '';
-//   display: inline-block;
-//   width: 16px;
-//   height: 15px;
-//   border: 2px solid $primary-text-color;
-//   border-radius: 2px;
-//   margin-right: 7px;
-
-//   background-color: $white-hero-color;
-
-//   @include tripleTransition(background-color, border-color, border);
-// }
-
-// .modal-form__agreement--checked {
-//   display: flex;
-//   align-items: center;
-
-//   &:hover::before,
-//   &:focus::before {
-//     border: 2px solid $accent-color;
-//   }
-// }
 
 .modal-form__agreement--contract {
   color: $accent-color;
