@@ -12,21 +12,46 @@
   @extend %is-hidden;
 }
 
+.bgc-portfolio {
+  padding: 60px 0;
+  border-top: 1px solid $border;
+
+  @media screen and (min-width: $desktop) {
+    padding: 94px 0;
+  }
+}
+
 .filter-portfolio {
   display: flex;
-  margin-bottom: 50px;
-  justify-content: center;
+  flex-wrap: wrap;
 
-  &__list {
-    margin-right: 8px;
+  margin-top: -15px;
+}
 
-    &:last-child {
-      margin-right: 0;
-    }
+.filter-portfolio__wrapper {
+  margin-bottom: 40px;
+}
+
+@media screen and (min-width: $tablet) {
+  .filter-portfolio__wrapper {
+    margin-bottom: 30px;
+  }
+
+  .filter-portfolio {
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .filter-portfolio__wrapper {
+    margin-bottom: 50px;
   }
 }
 
 .filter-portfolio__button {
+  margin-right: 8px;
+  margin-top: 15px;
+
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;

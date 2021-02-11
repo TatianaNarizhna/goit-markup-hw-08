@@ -2,39 +2,61 @@
   background-color: $secondary-bgc-gray;
   padding-top: 60px;
   padding-bottom: 60px;
-
-  &__baseline {
-    display: flex;
-    align-items: baseline;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-  }
-}
-
-.footer__address {
-  margin-right: 70px;
-  width: 231px;
 }
 
 .logo__studio--white {
   color: $white-hero-color;
 }
 
-.footer__address--physical {
-  display: block;
+.footer__mob {
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
+}
 
-  color: $white-hero-color;
+.logo__footer {
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 20px;
+    margin-right: auto;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 1.17;
+    text-align: center;
+  }
+}
+
+.footer__address {
+  @media screen and (min-width: $tablet) {
+    margin: 0 70px 0 0;
+  }
+}
+
+.footer__address--physical {
+  margin-bottom: 8px;
+
   line-height: 1.71;
-  margin-bottom: 9px;
   font-style: inherit;
+  font-weight: normal;
+  color: $white-hero-color;
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 9px;
+  }
 }
 
 .footer__address--virtual {
-  margin-bottom: 9px;
+  margin-bottom: 8px;
+  font-weight: normal;
+  line-height: 1.71;
 
   &:last-child {
     margin-bottom: 0;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 9px;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -50,21 +72,19 @@
   }
 }
 
-/* присоединяйтесь*/
+.list__footer {
+  margin-bottom: 60px;
+}
 
-.footer__join {
-  margin-right: 93px;
+.footer__join--appeal {
+  margin-bottom: 20px;
 
-  &--appeal {
-    margin: 0 0 20px 0;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
 
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 1.14;
-
-    color: $white-hero-color;
-    text-transform: uppercase;
-  }
+  color: $white-hero-color;
+  text-transform: uppercase;
 }
 
 .footer__networklist {
@@ -72,6 +92,8 @@
   padding: 0;
   margin: 0;
   list-style: none;
+
+  justify-content: center;
 
   &--positioning {
     margin-right: 10px;
@@ -91,6 +113,7 @@
   border-radius: 50%;
   fill: $secondary-bgc-white;
   background: $networklist-bgc;
+  justify-content: center;
 
   @include transition(background-color);
 
@@ -105,25 +128,11 @@
   height: 20px;
 }
 
-/*подписаться на рассылку*/
-
-.footer__mailing {
-  width: 570px;
-  height: 100%;
-
-  &--appeal {
-    margin: 0 0 20px 0;
-  }
-}
-
-.footer__mailing--centering {
-  display: flex;
-  margin-top: 20px;
+.footer__join {
+  margin-bottom: 60px;
 }
 
 .footer__mailing--appeal {
-  margin: 0 0 20px 0;
-
   font-weight: bold;
   font-size: 14px;
   line-height: 1.14;
@@ -134,8 +143,10 @@
 
 .footer__form {
   padding: 15px 0 15px 16px;
-  margin-right: 12px;
-  width: 358px;
+  width: 450px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
   font-weight: normal;
   font-size: 16px;
   line-height: 1.25;
@@ -146,6 +157,11 @@
   border: 1px solid $border-mailing-color;
   filter: drop-shadow(0px 4px 4px $filter-form-color);
   border-radius: 4px;
+
+  @media screen and (min-width: $desktop) {
+    width: 358px;
+    margin: 0 12px 0 0;
+  }
 }
 
 .footer__button {
@@ -156,6 +172,8 @@
   padding-bottom: 10px;
   padding-left: 29px;
   padding-right: 28px;
+  margin-left: auto;
+  margin-right: auto;
   width: 200px;
   height: 50px;
 
@@ -178,4 +196,27 @@
 
 .footer__iconmailing {
   margin-left: 10px;
+}
+
+.footer__baseline--tablet {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+  }
+}
+
+.footer__baseline {
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+}
+
+.footer__mailing--centering {
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    margin-top: 20px;
+  }
 }

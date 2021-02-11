@@ -1,14 +1,127 @@
 .bgc-team {
   background-color: $secondary-bgc-halfwhite;
+  padding: 60px 0;
+
+  @media screen and (min-width: $desktop) {
+    padding: 90px 0;
+  }
 }
 
 .section-title {
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 30px;
 
   font-weight: bold;
-  font-size: 36px;
-  line-height: 1.16;
+  font-size: 28px;
+  line-height: 1.18;
   text-align: center;
-  margin-bottom: 50px;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 36px;
+    line-height: 1.17;
+    margin-bottom: 50px;
+  }
+}
+
+.team-workers {
+  display: flex;
+  flex-wrap: wrap;
+  // margin: -15px;
+}
+
+.team-workers__portfolio {
+  background-color: $secondary-bgc-white;
+
+  box-shadow: 0px 1px 3px $box-shadow-grid1, 0px 1px 1px $box-shadow,
+    0px 2px 1px $backdrop;
+  border-radius: 0 0 4px 4px;
+
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: calc((100% - 2 * 30px) / 2);
+    margin: 15px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: calc((100% - 4 * 30px) / 4);
+  }
+}
+
+.team-workers__profile {
+  padding-top: 30px;
+  padding-bottom: 24px;
+  height: 162px;
+
+  @media screen and (min-width: $desktop) {
+    padding-bottom: 30px;
+    height: 168px;
+  }
+}
+
+.team-workers__name {
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  text-transform: none;
+}
+
+.team-workers__position {
+  margin-top: 0;
+  margin-bottom: 16px;
+
+  line-height: 1.19;
+  font-size: 16px;
+  text-align: center;
+  font-weight: normal;
+
+  color: $secondary-text-color;
+}
+
+.team-workers__network {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+
+  &--centered {
+    @include centeredFlex();
+    margin-right: 10px;
+    width: 44px;
+    height: 44px;
+  }
+
+  &--centered:last-child {
+    margin-right: 0;
+  }
+}
+
+.team-workers__network--transition {
+  @include centeredFlex();
+
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  fill: $network-color;
+
+  @include doubleTransition(background-color, fill);
+
+  &:focus,
+  &:hover {
+    background-color: $accent-color;
+    fill: $secondary-bgc-white;
+  }
+}
+
+.team-workers__icon {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  margin: 0;
 }

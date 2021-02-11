@@ -242,7 +242,7 @@
 
 .header__menu {
   display: inline-flex;
-  z-index: 2;
+  z-index: 4;
 
   padding: 10px 0 10px 0;
   margin-left: auto;
@@ -287,6 +287,7 @@
   padding: 48px 83px 47px 40px;
 
   background-color: $white-hero-color;
+  z-index: 3;
 
   &.is-open {
     display: block;
@@ -362,6 +363,9 @@
 
 .menu-container__social {
   @extend %list;
+  position: relative;
+
+  margin-left: 20px;
 }
 
 .menu-container__social--link {
@@ -372,4 +376,17 @@
   color: $accent-color;
 
   @extend %link;
+}
+
+/*псевдоэлементы*/
+
+.menu-container__social--link::after {
+  content: '';
+  position: absolute;
+  right: 10px;
+  display: block;
+  width: 1px;
+  height: 100%;
+  border-color: rgba(33, 33, 33, 0.2);
+  opacity: 1;
 }
