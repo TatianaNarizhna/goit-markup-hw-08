@@ -840,8 +840,8 @@ img {
   margin-right: auto;
   text-align: center;
   background-color: #c4c4c4;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(54, 56, 67, 0.4)), to(rgba(54, 56, 67, 0.4))), url("../../imagesoptimized/background-img/mobile/Header img1x.jpg");
-  background-image: linear-gradient(to right, rgba(54, 56, 67, 0.4), rgba(54, 56, 67, 0.4)), url("../../imagesoptimized/background-img/mobile/Header img1x.jpg");
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(54, 56, 67, 0.4)), to(rgba(54, 56, 67, 0.4))), url("../imagesoptimized/background-img/mobile/Header img1x.jpg");
+  background-image: linear-gradient(to right, rgba(54, 56, 67, 0.4), rgba(54, 56, 67, 0.4)), url("../imagesoptimized/background-img/mobile/Header img1x.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -849,22 +849,22 @@ img {
 
 @media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
   .overlay {
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(54, 56, 67, 0.4)), to(rgba(54, 56, 67, 0.4))), url("../../imagesoptimized/background-img/mobile/Header img@2x.jpg");
-    background-image: linear-gradient(to right, rgba(54, 56, 67, 0.4), rgba(54, 56, 67, 0.4)), url("../../imagesoptimized/background-img/mobile/Header img@2x.jpg");
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(54, 56, 67, 0.4)), to(rgba(54, 56, 67, 0.4))), url("../imagesoptimized/background-img/mobile/Header img@2x.jpg");
+    background-image: linear-gradient(to right, rgba(54, 56, 67, 0.4), rgba(54, 56, 67, 0.4)), url("../imagesoptimized/background-img/mobile/Header img@2x.jpg");
   }
 }
 
 @media screen and (min-width: 768px) {
   .overlay {
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(54, 56, 67, 0.4)), to(rgba(54, 56, 67, 0.4))), url("../../imagesoptimized/background-img/tablet/Header img1x.jpg");
-    background-image: linear-gradient(to right, rgba(54, 56, 67, 0.4), rgba(54, 56, 67, 0.4)), url("../../imagesoptimized/background-img/tablet/Header img1x.jpg");
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(54, 56, 67, 0.4)), to(rgba(54, 56, 67, 0.4))), url("../imagesoptimized/background-img/tablet/Header img1x.jpg");
+    background-image: linear-gradient(to right, rgba(54, 56, 67, 0.4), rgba(54, 56, 67, 0.4)), url("../imagesoptimized/background-img/tablet/Header img1x.jpg");
   }
 }
 
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .overlay {
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(54, 56, 67, 0.4)), to(rgba(54, 56, 67, 0.4))), url("../../imagesoptimized/background-img/tablet/Header img@2x.jpg");
-    background-image: linear-gradient(to right, rgba(54, 56, 67, 0.4), rgba(54, 56, 67, 0.4)), url("../../imagesoptimized/background-img/tablet/Header img@2x.jpg");
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(54, 56, 67, 0.4)), to(rgba(54, 56, 67, 0.4))), url("../imagesoptimized/background-img/tablet/Header img@2x.jpg");
+    background-image: linear-gradient(to right, rgba(54, 56, 67, 0.4), rgba(54, 56, 67, 0.4)), url("../imagesoptimized/background-img/tablet/Header img@2x.jpg");
   }
 }
 
@@ -872,15 +872,15 @@ img {
   .overlay {
     padding: 200px 0;
     height: 600px;
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(54, 56, 67, 0.4)), to(rgba(54, 56, 67, 0.4))), url("../../imagesoptimized/background-img/desktop/Img1x.jpg");
-    background-image: linear-gradient(to right, rgba(54, 56, 67, 0.4), rgba(54, 56, 67, 0.4)), url("../../imagesoptimized/background-img/desktop/Img1x.jpg");
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(54, 56, 67, 0.4)), to(rgba(54, 56, 67, 0.4))), url("../imagesoptimized/background-img/desktop/Img1x.jpg");
+    background-image: linear-gradient(to right, rgba(54, 56, 67, 0.4), rgba(54, 56, 67, 0.4)), url("../imagesoptimized/background-img/desktop/Img1x.jpg");
   }
 }
 
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .overlay {
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(54, 56, 67, 0.4)), to(rgba(54, 56, 67, 0.4))), url("../../imagesoptimized/background-img/desktop/Img@2x.jpg");
-    background-image: linear-gradient(to right, rgba(54, 56, 67, 0.4), rgba(54, 56, 67, 0.4)), url("../../imagesoptimized/background-img/desktop/Img@2x.jpg");
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(54, 56, 67, 0.4)), to(rgba(54, 56, 67, 0.4))), url("../imagesoptimized/background-img/desktop/Img@2x.jpg");
+    background-image: linear-gradient(to right, rgba(54, 56, 67, 0.4), rgba(54, 56, 67, 0.4)), url("../imagesoptimized/background-img/desktop/Img@2x.jpg");
   }
 }
 
