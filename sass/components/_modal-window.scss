@@ -80,14 +80,23 @@
 }
 
 .modal-form__thumb {
-  width: 100%;
-  height: auto;
+  width: 370px;
+  height: 342px;
+  margin-bottom: 20px;
+
+  @media screen and (min-width: $desktop) {
+    width: 448px;
+  }
 }
 
 .modal-form__input {
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .modal-form__input label {
@@ -175,7 +184,7 @@
 
 .modal-form__agreement {
   margin: 0;
-  margin-bottom: 32px;
+  margin-bottom: 30px;
   width: 425px;
   margin-right: auto;
   margin-left: auto;

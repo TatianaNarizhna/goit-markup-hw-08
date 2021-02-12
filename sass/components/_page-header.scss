@@ -250,14 +250,14 @@
   border: transparent;
 
   cursor: pointer;
-}
 
-.header-menu {
-  @include transition();
+  &--active {
+    @include transition();
+  }
 
-  &:hover,
-  &:focus {
-    color: $accent-color;
+  &--active:hover,
+  &--active:focus {
+    fill: $accent-color;
   }
 }
 
@@ -365,7 +365,7 @@
   @extend %list;
   position: relative;
 
-  margin-left: 20px;
+  margin-right: 10px;
 }
 
 .menu-container__social--link {
@@ -378,15 +378,7 @@
   @extend %link;
 }
 
-/*псевдоэлементы*/
-
-.menu-container__social--link::after {
-  content: '';
-  position: absolute;
-  right: 10px;
-  display: block;
-  width: 1px;
-  height: 100%;
-  border-color: rgba(33, 33, 33, 0.2);
-  opacity: 1;
+.menu-container__social:not(:last-child) {
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+  padding-right: 10px;
 }

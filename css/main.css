@@ -704,7 +704,7 @@ img {
   cursor: pointer;
 }
 
-.header-menu {
+.header__menu--active {
   -webkit-transition-property: color;
   transition-property: color;
   -webkit-transition-duration: 250ms;
@@ -713,8 +713,8 @@ img {
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.header-menu:hover, .header-menu:focus {
-  color: #2196f3;
+.header__menu--active:hover, .header__menu--active:focus {
+  fill: #2196f3;
 }
 
 .header__menu .icon-cross {
@@ -816,7 +816,7 @@ img {
 
 .menu-container__social {
   position: relative;
-  margin-left: 20px;
+  margin-right: 10px;
 }
 
 .menu-container__social--link {
@@ -827,16 +827,9 @@ img {
   color: #2196f3;
 }
 
-/*псевдоэлементы*/
-.menu-container__social--link::after {
-  content: '';
-  position: absolute;
-  right: 10px;
-  display: block;
-  width: 1px;
-  height: 100%;
-  border-color: rgba(33, 33, 33, 0.2);
-  opacity: 1;
+.menu-container__social:not(:last-child) {
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+  padding-right: 10px;
 }
 
 .overlay {
@@ -1809,8 +1802,15 @@ img {
 }
 
 .modal-form__thumb {
-  width: 100%;
-  height: auto;
+  width: 370px;
+  height: 342px;
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 1200px) {
+  .modal-form__thumb {
+    width: 448px;
+  }
 }
 
 .modal-form__input {
@@ -1821,7 +1821,11 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+}
+
+.modal-form__input:last-child {
+  margin-bottom: 0;
 }
 
 .modal-form__input label {
@@ -1952,7 +1956,7 @@ img {
 
 .modal-form__agreement {
   margin: 0;
-  margin-bottom: 32px;
+  margin-bottom: 30px;
   width: 425px;
   margin-right: auto;
   margin-left: auto;
