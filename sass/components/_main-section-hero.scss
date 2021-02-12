@@ -7,32 +7,57 @@
   margin-right: auto;
   text-align: center;
 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
   background-color: $hero-bgc-color;
+
   background-image: linear-gradient(
       to right,
       rgba(54, 56, 67, 0.4),
       rgba(54, 56, 67, 0.4)
     ),
-    url('../imagesoptimized/background-img/mobile/Header\ img1x.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+    url('../../imagesoptimized/background-img/tablet/Header\ img1x.jpg');
 }
 
-@media screen and (min-device-pixel-ratio: 2),
-  screen and (min-resolution: 192dpi),
-  screen and (min-resolution: 2dppx) {
+@media screen and (max-width: 479px) {
   .overlay {
     background-image: linear-gradient(
         to right,
         rgba(54, 56, 67, 0.4),
         rgba(54, 56, 67, 0.4)
       ),
-      url('../imagesoptimized/background-img/mobile/Header\ img@2x.jpg');
+      url('../imagesoptimized/background-img/mobile/Header\ img1x.jpg');
+  }
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    .overlay {
+      background-image: linear-gradient(
+          to right,
+          rgba(54, 56, 67, 0.4),
+          rgba(54, 56, 67, 0.4)
+        ),
+        url('../imagesoptimized/background-img/mobile/Header\ img@2x.jpg');
+    }
   }
 }
 
-@media screen and (min-width: 768px) {
+// @media screen and (min-device-pixel-ratio: 2),
+//   screen and (min-resolution: 192dpi),
+//   screen and (min-resolution: 2dppx) {
+//   .overlay {
+//     background-image: linear-gradient(
+//         to right,
+//         rgba(54, 56, 67, 0.4),
+//         rgba(54, 56, 67, 0.4)
+//       ),
+//       url('../imagesoptimized/background-img/mobile/Header\ img@2x.jpg');
+//   }
+// }
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
   .overlay {
     background-image: linear-gradient(
         to right,
@@ -55,7 +80,7 @@
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 769px) {
   .overlay {
     padding: 200px 0;
     height: 600px;

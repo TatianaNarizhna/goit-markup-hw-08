@@ -1,5 +1,6 @@
 .table-portfolio__link {
   display: block;
+  width: 100%;
   @extend %link;
 
   @include transition(box-shadow);
@@ -19,6 +20,8 @@
 .table-portfolio__overlay {
   position: relative;
   overflow: hidden;
+  // width: 100%;
+  // height: 100%;
 
   &--transformed {
     position: absolute;
@@ -26,6 +29,7 @@
     height: 100%;
     top: 100%;
     left: 0;
+    // bottom: 0;
     background-color: $accent-color;
     transform: translateY(0);
 
@@ -40,15 +44,16 @@
   padding: 77px 24px;
   transform: translate(-50%, -50%);
   width: 100%;
+  height: 100%;
   margin: 0;
 
   font-weight: normal;
   font-size: 18px;
-  line-height: 1.55;
+  line-height: 1.56;
   color: $white-hero-color;
 
   @media screen and (min-width: $tablet) {
-    padding: 49px 24px;
+    padding: 49px 22px;
   }
 
   @media screen and (min-width: $desktop) {
@@ -90,7 +95,7 @@
 @media screen and (max-width: 767px) {
   .table-portfolio__list {
     &:not(:last-child) {
-      margin-bottom: 30px;
+      margin-bottom: 15px;
     }
   }
 }
@@ -118,4 +123,14 @@
   .table-portfolio__list {
     flex-basis: calc((100% - 3 * 30px) / 3);
   }
+}
+
+.table-portfolio__list {
+  display: inline-block;
+  width: calc(100% - 30px);
+  margin: 15px;
+}
+
+.table-portfolio {
+  margin: -15px;
 }

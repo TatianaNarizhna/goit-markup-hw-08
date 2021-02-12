@@ -356,7 +356,8 @@ img {
 }
 
 .container {
-  width: 100%;
+  max-width: 1200px;
+  min-width: 320px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
@@ -680,25 +681,15 @@ img {
 }
 
 .header__menu {
-  -webkit-transition-property: color;
-  transition-property: color;
-  -webkit-transition-duration: 250ms;
-          transition-duration: 250ms;
-  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.header__menu:hover, .header__menu:focus {
-  color: #2196f3;
-}
-
-.header__menu {
+  position: absolute;
+  right: 0;
+  top: 0;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
   z-index: 4;
   padding: 10px 0 10px 0;
-  margin-left: auto;
+  margin-right: 15px;
   background-color: transparent;
   border: transparent;
   cursor: pointer;
@@ -993,7 +984,8 @@ img {
 
 .footer__form {
   padding: 15px 0 15px 16px;
-  width: 450px;
+  width: 100%;
+  height: 50px;
   margin-top: 20px;
   margin-bottom: 20px;
   font-weight: normal;
@@ -1008,6 +1000,12 @@ img {
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+}
+
+@media screen and (min-width: 768px) {
+  .footer__form {
+    width: 450px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -1169,6 +1167,7 @@ img {
 
 .table-portfolio__link {
   display: block;
+  width: 100%;
   -webkit-transition-property: -webkit-box-shadow;
   transition-property: -webkit-box-shadow;
   transition-property: box-shadow;
@@ -1222,16 +1221,17 @@ img {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   width: 100%;
+  height: 100%;
   margin: 0;
   font-weight: normal;
   font-size: 18px;
-  line-height: 1.55;
+  line-height: 1.56;
   color: #ffffff;
 }
 
 @media screen and (min-width: 768px) {
   .table-portfolio__overlay--text {
-    padding: 49px 24px;
+    padding: 49px 22px;
   }
 }
 
@@ -1270,7 +1270,7 @@ img {
 
 @media screen and (max-width: 767px) {
   .table-portfolio__list:not(:last-child) {
-    margin-bottom: 30px;
+    margin-bottom: 15px;
   }
 }
 
@@ -1301,5 +1301,15 @@ img {
     -ms-flex-preferred-size: calc((100% - 3 * 30px) / 3);
         flex-basis: calc((100% - 3 * 30px) / 3);
   }
+}
+
+.table-portfolio__list {
+  display: inline-block;
+  width: calc(100% - 30px);
+  margin: 15px;
+}
+
+.table-portfolio {
+  margin: -15px;
 }
 /*# sourceMappingURL=profile.css.map */

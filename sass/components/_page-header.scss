@@ -232,20 +232,14 @@
 }
 
 .header__menu {
-  @include transition();
-
-  &:hover,
-  &:focus {
-    color: $accent-color;
-  }
-}
-
-.header__menu {
+  position: absolute;
+  right: 0;
+  top: 0;
   display: inline-flex;
   z-index: 4;
 
   padding: 10px 0 10px 0;
-  margin-left: auto;
+  margin-right: 15px;
   background-color: transparent;
   border: transparent;
 
