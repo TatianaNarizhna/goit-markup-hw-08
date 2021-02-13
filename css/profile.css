@@ -1217,16 +1217,30 @@ img {
   position: absolute;
   top: 50%;
   left: 50%;
-  padding: 77px 24px;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
   margin: 0;
   font-weight: normal;
-  font-size: 18px;
+  font-size: calc(15px + (3 + 3 * 0.7) * ((100vw - 320px) / 1200));
   line-height: 1.56;
   color: #ffffff;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .table-portfolio__overlay--text {
+    padding-top: calc(10px + (67 + 67 * 0.7) * ((100vw - 320px) / 1200));
+    padding-bottom: calc(10px + (67 + 67 * 0.7) * ((100vw - 320px) / 1200));
+    padding-right: calc(20px + (4 + 4 * 0.7) * ((100vw - 320px) / 1200));
+    padding-left: calc(20px + (4 + 4 * 0.7) * ((100vw - 320px) / 1200));
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .table-portfolio__overlay--text {
+    padding: 77px 24px;
+  }
 }
 
 @media screen and (min-width: 768px) {
