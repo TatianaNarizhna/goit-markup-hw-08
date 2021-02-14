@@ -80,7 +80,7 @@
           >
           <button
             type="button"
-            class="header__menu"
+            class="header__menu is-open"
             aria-expanded="false"
             aria-controls="menu-container"
             data-menu-button
@@ -103,7 +103,7 @@
           </button>
 
           <!-- выпадающее меню -->
-          <div class="menu-container" id="menu-container" data-menu>
+          <div class="menu-container is-open" id="menu-container" data-menu>
             <ul class="menu-container__navigation">
               <li class="menu-container__item">
                 <a
@@ -127,34 +127,37 @@
                 >
               </li>
             </ul>
+            <div>
+              <ul class="menu-container__contacts--list">
+                <li class="menu-container__contacts">
+                  <a href="tel:+380961111111" class="menu-container__tel"
+                    >+38 096 111 11 11</a
+                  >
+                </li>
+                <li class="menu-container__contacts">
+                  <a
+                    href="mailto:info@devstudio.com"
+                    class="menu-container__mail"
+                    >info@devstudio.com</a
+                  >
+                </li>
+              </ul>
 
-            <ul class="menu-container__contacts--list">
-              <li class="menu-container__contacts">
-                <a href="tel:+380961111111" class="menu-container__tel"
-                  >+38 096 111 11 11</a
-                >
-              </li>
-              <li class="menu-container__contacts">
-                <a href="mailto:info@devstudio.com" class="menu-container__mail"
-                  >info@devstudio.com</a
-                >
-              </li>
-            </ul>
-
-            <ul class="menu-container__network">
-              <li class="menu-container__social">
-                <a href="" class="menu-container__social--link">Instagram</a>
-              </li>
-              <li class="menu-container__social">
-                <a href="" class="menu-container__social--link">Twitter</a>
-              </li>
-              <li class="menu-container__social">
-                <a href="" class="menu-container__social--link">Facebook</a>
-              </li>
-              <li class="menu-container__social">
-                <a href="" class="menu-container__social--link">LinkedIn</a>
-              </li>
-            </ul>
+              <ul class="menu-container__network">
+                <li class="menu-container__social">
+                  <a href="" class="menu-container__social--link">Instagram</a>
+                </li>
+                <li class="menu-container__social">
+                  <a href="" class="menu-container__social--link">Twitter</a>
+                </li>
+                <li class="menu-container__social">
+                  <a href="" class="menu-container__social--link">Facebook</a>
+                </li>
+                <li class="menu-container__social">
+                  <a href="" class="menu-container__social--link">LinkedIn</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </nav>
       </div>

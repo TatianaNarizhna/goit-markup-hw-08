@@ -730,7 +730,7 @@ img {
   top: 0;
   left: 0;
   width: 100%;
-  height: 796px;
+  min-height: 100vh;
   padding: 48px 83px 47px 40px;
   background-color: #ffffff;
   z-index: 3;
@@ -740,18 +740,24 @@ img {
   display: block;
 }
 
-.menu-container__navigation {
-  font-weight: 500;
-  font-size: 30px;
-  line-height: 1.18;
-  letter-spacing: 0.02em;
-  margin-bottom: 302px;
+.menu-container.is-open {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-@media screen and (min-width: 480px) {
-  .menu-container__navigation {
-    font-size: 40px;
-  }
+.menu-container__navigation {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
 }
 
 .ooo {
@@ -1772,7 +1778,7 @@ img {
   left: 50%;
   -webkit-transform: translate(-50%, -50%) scale(1);
           transform: translate(-50%, -50%) scale(1);
-  z-index: 5;
+  z-index: 999;
   padding: 40px;
   width: 100%;
   height: 609px;
@@ -1958,7 +1964,6 @@ img {
 }
 
 .modal-form__icon:focus-within > .modal-form__border {
-  border-color: #2196f3;
   outline: transparent;
 }
 
@@ -2026,6 +2031,7 @@ img {
   background-size: contain;
   background-origin: border-box;
   border-color: #2196f3;
+  outline: transparent;
 }
 
 .modal-form__agreement--hidden:focus + .modal-form__agreement--checked::before {
@@ -2033,7 +2039,7 @@ img {
 }
 
 .modal-form__agreement--hidden:checked:focus + .modal-form__agreement--checked::before {
-  outline: 2px solid #2196f3;
+  outline: transparent;
 }
 
 .modal-form__agreement--checked::before {
@@ -2051,6 +2057,12 @@ img {
           transition-duration: 250ms, 250ms, 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1), cubic-bezier(0.4, 0, 0.2, 1), cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1), cubic-bezier(0.4, 0, 0.2, 1), cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (max-width: 479px) {
+  .modal-form__agreement--checked::before {
+    height: 13px;
+  }
 }
 
 .modal-form__agreement--checked {
@@ -2131,5 +2143,9 @@ img {
 
 .modal-form__cross--transition:hover, .modal-form__cross--transition:focus {
   fill: #2196f3;
+}
+
+.modal-window.is-open .header__menu {
+  display: none;
 }
 /*# sourceMappingURL=main.css.map */

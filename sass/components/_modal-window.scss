@@ -13,6 +13,9 @@
 
   @include transition(opacity);
 }
+// .header {
+//   position: relative;
+// }
 
 .is-hidden {
   position: absolute;
@@ -30,7 +33,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-  z-index: 5;
+  z-index: 999;
   // margin: 93px auto;
   padding: 40px;
 
@@ -168,7 +171,7 @@
 }
 
 .modal-form__icon:focus-within > .modal-form__border {
-  border-color: $accent-color;
+  // border-color: $accent-color;
   outline: transparent;
 }
 
@@ -232,6 +235,7 @@
   background-size: contain;
   background-origin: border-box;
   border-color: $accent-color;
+  outline: transparent;
 }
 
 .modal-form__agreement--hidden:focus + .modal-form__agreement--checked::before {
@@ -240,7 +244,8 @@
 
 .modal-form__agreement--hidden:checked:focus
   + .modal-form__agreement--checked::before {
-  outline: 2px solid $accent-color;
+  // outline: 2px solid $accent-color;
+  outline: transparent;
 }
 
 .modal-form__agreement--checked::before {
@@ -255,6 +260,10 @@
   background-color: $white-hero-color;
 
   @include tripleTransition(background-color, border-color, border);
+
+  @media screen and (max-width: 479px) {
+    height: 13px;
+  }
 }
 
 .modal-form__agreement--checked {
@@ -325,4 +334,8 @@
   &:focus {
     fill: $accent-color;
   }
+}
+
+.modal-window.is-open .header__menu {
+  display: none;
 }
