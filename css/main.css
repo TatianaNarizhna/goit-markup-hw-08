@@ -790,7 +790,7 @@ img {
 
 .menu-container__tel {
   font-weight: 500;
-  font-size: 20px;
+  font-size: 22px;
   line-height: 1.18;
   letter-spacing: 0.02em;
   color: #2196f3;
@@ -1750,6 +1750,7 @@ img {
   top: 0;
   left: 0;
   padding: 15px;
+  z-index: 999;
   width: 100%;
   height: 100%;
   opacity: 1;
@@ -1778,7 +1779,6 @@ img {
   left: 50%;
   -webkit-transform: translate(-50%, -50%) scale(1);
           transform: translate(-50%, -50%) scale(1);
-  z-index: 999;
   padding: 40px;
   width: 100%;
   height: 609px;
@@ -2130,6 +2130,12 @@ img {
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: #ffffff;
   cursor: pointer;
+}
+
+@media screen and (max-width: 479px) {
+  .modal-form__cross {
+    margin-top: 25px;
+  }
 }
 
 .modal-form__cross--transition {

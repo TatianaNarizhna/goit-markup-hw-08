@@ -3,19 +3,16 @@
   top: 0;
   left: 0;
   padding: 15px;
+  z-index: 999;
 
   width: 100%;
   height: 100%;
   opacity: 1;
-  // overflow-y: scroll;
 
   background-color: $backdrop;
 
   @include transition(opacity);
 }
-// .header {
-//   position: relative;
-// }
 
 .is-hidden {
   position: absolute;
@@ -33,8 +30,6 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-  z-index: 999;
-  // margin: 93px auto;
   padding: 40px;
 
   width: 100%;
@@ -54,7 +49,6 @@
   @media screen and (min-width: $desktop) {
     width: 528px;
     height: 581px;
-    // margin: 221px auto;
   }
 }
 
@@ -325,6 +319,10 @@
   border: 1px solid $border-cross;
   background-color: $white-hero-color;
   cursor: pointer;
+
+  @media screen and (max-width: 479px) {
+    margin-top: 25px;
+  }
 }
 
 .modal-form__cross--transition {
